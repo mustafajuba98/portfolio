@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +11,10 @@ type Project = {
   technologies: string[];
   imageUrl?: string;
   githubUrl?: string;
+  multipleRepos?: {
+    frontend?: string;
+    backend?: string;
+  };
   liveUrl?: string;
   type: string;
 };
@@ -23,7 +26,10 @@ const projects: Project[] = [
     description: "A comprehensive platform for freelancers and clients to connect, collaborate, and manage projects effectively.",
     technologies: ["React.js", "Redux", "Bootstrap", "Django REST", "PostgreSQL"],
     imageUrl: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    multipleRepos: {
+      frontend: "https://github.com/PenPro-Team/Freelancia-Front-End",
+      backend: "https://github.com/PenPro-Team/Freelancia-Back-End"
+    },
     type: "ITI",
   },
   {
@@ -32,7 +38,7 @@ const projects: Project[] = [
     description: "A platform enabling users to create and fund projects, with comprehensive campaign management features.",
     technologies: ["Django", "Python", "PostgreSQL", "jinja Templates", "HTML", "CSS", "Bootstrap"],
     imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    githubUrl: "https://github.com/hosam7080/django-help-me",
     type: "ITI",
   },
   {
@@ -41,7 +47,7 @@ const projects: Project[] = [
     description: "A feature-rich online shopping platform with product catalog, cart management, and secure checkout.",
     technologies: ["React.js", "Redux", "Tailwind CSS"],
     imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mustafajuba98/e-commerce",
     type: "Personal",
   },
   {
@@ -50,7 +56,10 @@ const projects: Project[] = [
     description: "A platform connecting service providers with customers for various home and professional services.",
     technologies: ["React.js", "Redux", "Tailwind CSS", "Python", "Django", "REST Framework"],
     imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    multipleRepos: {
+      frontend: "https://github.com/PenPro-Team/Shoghl-Fnadek",
+      backend: "https://github.com/PenPro-Team/Shoghl-Fnadek-Back"
+    },
     type: "Collaborative",
   },
   {
@@ -59,7 +68,7 @@ const projects: Project[] = [
     description: "An interactive application for browsing movies, reading reviews, and discovering new films.",
     technologies: ["React", "Material UI"],
     imageUrl: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mustafajuba98/MoviesApp",
     type: "Personal",
   },
   {
@@ -68,7 +77,7 @@ const projects: Project[] = [
     description: "A command-line tool for managing databases with features for data manipulation and querying.",
     technologies: ["Bash"],
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mustafajuba98/DBMS_BashScripting",
     type: "Personal",
   }
 ];
@@ -171,12 +180,31 @@ const ProjectsSection = () => {
                     </Badge>
                   </div>
                   <div className="absolute inset-0 bg-black/50 opacity-0 transition-opacity project-overlay flex items-center justify-center space-x-4">
-                    {project.githubUrl && (
-                      <Button size="sm" variant="outline" className="bg-white">
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                          <Github className="h-4 w-4 mr-1" /> Code
-                        </a>
-                      </Button>
+                    {project.multipleRepos ? (
+                      <>
+                        {project.multipleRepos.frontend && (
+                          <Button size="sm" variant="outline" className="bg-white">
+                            <a href={project.multipleRepos.frontend} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                              <Github className="h-4 w-4 mr-1" /> Frontend
+                            </a>
+                          </Button>
+                        )}
+                        {project.multipleRepos.backend && (
+                          <Button size="sm" variant="outline" className="bg-white">
+                            <a href={project.multipleRepos.backend} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                              <Github className="h-4 w-4 mr-1" /> Backend
+                            </a>
+                          </Button>
+                        )}
+                      </>
+                    ) : (
+                      project.githubUrl && (
+                        <Button size="sm" variant="outline" className="bg-white">
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            <Github className="h-4 w-4 mr-1" /> Code
+                          </a>
+                        </Button>
+                      )
                     )}
                     {project.liveUrl && (
                       <Button size="sm" variant="outline" className="bg-white">

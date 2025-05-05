@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { File, Mail, MapPin, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
+import CV from "../assets/Mustafa_Muhammed_CV .pdf";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
@@ -33,7 +33,7 @@ const AboutSection = () => {
                 className="bg-portfolio-primary hover:bg-portfolio-accent text-white flex gap-2 items-center"
                 asChild
               >
-                <a href="#" download>
+                <a href={CV} download>
                   <File className="h-4 w-4" />
                   Download CV
                 </a>
