@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { Github, Mail, MapPin, Phone, Linkedin, Globe } from "lucide-react";
 import { toast } from "sonner";
 
 const ContactSection = () => {
@@ -82,8 +82,18 @@ const ContactSection = () => {
                     <div>
                       <h4 className="text-sm text-gray-500">Location</h4>
                       <p className="text-gray-800">
-                        Fayoum City, Egypt
+                        Cairo City, Egypt
                       </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <Globe className="h-5 w-5 text-portfolio-accent mr-3" />
+                    <div>
+                      <h4 className="text-sm text-gray-500">Portfolio</h4>
+                      <a href="https://portfolio-nine-swart-92.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-portfolio-accent transition-colors">
+                        portfolio-nine-swart-92.vercel.app
+                      </a>
                     </div>
                   </div>
                 </div>

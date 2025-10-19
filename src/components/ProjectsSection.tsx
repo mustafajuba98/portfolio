@@ -22,6 +22,30 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Mentora - E-Learning Platform",
+    description: "A responsive multi-role platform (Student, Teacher, Parent, Admin) with advanced role-based access and JWT/OTP authentication. Features course management, scheduling system, and interactive content integration.",
+    technologies: ["React.js", "Vite", "TailwindCSS", "Django REST Framework", "JWT", "H5P", "HTML5"],
+    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    type: "Professional",
+  },
+  {
+    id: 2,
+    title: "Dynamic Clinic Management System",
+    description: "A full-stack clinic management application for Dr. Ahmed El Kholy Clinic with appointment scheduling, patient record management, prescription generation, and dynamic dashboard for clinic insights.",
+    technologies: ["Next.js", "React", "Django REST Framework", "Simple JWT", "Tailwind CSS", "shadcn/ui"],
+    imageUrl: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    type: "Professional",
+  },
+  {
+    id: 3,
+    title: "AresModz - Gaming Mods E-commerce",
+    description: "Frontend for an e-commerce platform specializing in premium gaming modifications, featuring product browsing, detailed views, user accounts, and shopping cart functionality.",
+    technologies: ["React", "Vite", "Next.js", "Tailwind CSS", "shadcn/ui"],
+    imageUrl: "https://images.unsplash.com/photo-1556438064-2d7646166914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    type: "Professional",
+  },
+  {
+    id: 4,
     title: "Freelancing Platform",
     description: "A comprehensive platform for freelancers and clients to connect, collaborate, and manage projects effectively.",
     technologies: ["React.js", "Redux", "Bootstrap", "Django REST", "PostgreSQL"],
@@ -33,16 +57,19 @@ const projects: Project[] = [
     type: "ITI",
   },
   {
-    id: 2,
-    title: "Crowd Funding",
-    description: "A platform enabling users to create and fund projects, with comprehensive campaign management features.",
-    technologies: ["Django", "Python", "PostgreSQL", "jinja Templates", "HTML", "CSS", "Bootstrap"],
-    imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    githubUrl: "https://github.com/hosam7080/django-help-me",
+    id: 5,
+    title: "Shoghl-Fnadek (Hotel Job Portal)",
+    description: "A full-stack job portal specifically for the hotel industry, facilitating connections between employers and job seekers with search and filtering capabilities.",
+    technologies: ["React.js", "Redux", "Tailwind CSS", "Python", "Django", "REST Framework"],
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    multipleRepos: {
+      frontend: "https://github.com/PenPro-Team/Shoghl-Fnadek",
+      backend: "https://github.com/PenPro-Team/Shoghl-Fnadek-Back"
+    },
     type: "ITI",
   },
   {
-    id: 3,
+    id: 6,
     title: "E-Commerce Website",
     description: "A feature-rich online shopping platform with product catalog, cart management, and secure checkout.",
     technologies: ["React.js", "Redux", "Tailwind CSS"],
@@ -51,19 +78,7 @@ const projects: Project[] = [
     type: "Personal",
   },
   {
-    id: 4,
-    title: "shoghl-fnadek",
-    description: "A platform connecting service providers with customers for various home and professional services.",
-    technologies: ["React.js", "Redux", "Tailwind CSS", "Python", "Django", "REST Framework"],
-    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    multipleRepos: {
-      frontend: "https://github.com/PenPro-Team/Shoghl-Fnadek",
-      backend: "https://github.com/PenPro-Team/Shoghl-Fnadek-Back"
-    },
-    type: "Collaborative",
-  },
-  {
-    id: 5,
+    id: 7,
     title: "Movie App",
     description: "An interactive application for browsing movies, reading reviews, and discovering new films.",
     technologies: ["React", "Material UI"],
@@ -72,7 +87,7 @@ const projects: Project[] = [
     type: "Personal",
   },
   {
-    id: 6,
+    id: 8,
     title: "Database Management System",
     description: "A command-line tool for managing databases with features for data manipulation and querying.",
     technologies: ["Bash"],
@@ -147,6 +162,14 @@ const ProjectsSection = () => {
               className={filter === "collaborative" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
             >
               Collaborative
+            </Button>
+            <Button
+              variant={filter === "professional" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setFilter("professional")}
+              className={filter === "professional" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
+            >
+              Professional
             </Button>
           </div>
         </div>

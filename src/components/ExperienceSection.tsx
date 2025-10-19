@@ -14,6 +14,19 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
+    type: "work",
+    title: "Full Stack Python Developer",
+    organization: "Opream & Expotech",
+    location: "Remote",
+    period: "2024 – Present",
+    description: [
+      "Contributed to backend development with Django REST Framework, implementing secure role-based APIs.",
+      "Developed interactive frontend modules using React.js and TailwindCSS with focus on responsive design.",
+      "Built and maintained scalable backend services with Django and PostgreSQL.",
+      "Integrated third-party APIs and optimized database queries for performance."
+    ],
+  },
+  {
     type: "internship",
     title: "Full Stack Developer Intern",
     organization: "Information Technology Institute (ITI)",
@@ -53,7 +66,7 @@ const experiences: ExperienceItem[] = [
   {
     type: "education",
     title: "Bachelor's Degree in Islamic and Arabic Studies",
-    organization: "Faculty of Islamic and Arabic Studies",
+    organization: "Faculty of Islamic and Arabic Studies, Al-Azhar University",
     location: "Sharqia, Egypt",
     period: "Graduated Sep. 2023",
     description: [

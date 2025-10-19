@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { File, Mail, MapPin, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import CV from "../assets/Mustafa_Muhammed_CV .pdf";
+import CV from "../assets/Mustafa_Muhammed_CV.pdf";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
@@ -14,18 +14,19 @@ const AboutSection = () => {
             <p className="text-gray-700 leading-relaxed mb-6">
               I'm a Full Stack Python Developer with a strong foundation in full-stack web development using Django, Flask, 
               and React.js. I'm passionate about creating scalable, secure, and user-centric solutions that solve real-world problems.
+              Currently working at Opream & Expotech, contributing to backend development with Django REST Framework.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-6">
               My experience includes developing full-stack web applications, engineering responsive front-end components,
               implementing automation scripts, and working with cross-functional teams to deliver complex project requirements
-              within tight deadlines.
+              within tight deadlines. I specialize in building e-learning platforms, clinic management systems, and e-commerce solutions.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-8">
-              Beyond coding, I've had experience as a translator between English and Arabic, ensuring accuracy
-              and cultural nuance. I've also managed kitchen operations as a chef, which honed my leadership and
-              time management skills.
+              I hold a Bachelor's Degree in Islamic and Arabic Studies from Al-Azhar University, which has enhanced my 
+              analytical thinking and research methodologies. My diverse background includes experience as a translator 
+              and chef, which has developed my leadership, time management, and communication skills.
             </p>
             
             <div className="flex flex-wrap gap-3">
@@ -51,7 +52,7 @@ const AboutSection = () => {
                     <MapPin className="h-5 w-5 text-portfolio-accent mt-1" />
                     <div>
                       <h4 className="font-medium text-gray-900">Location</h4>
-                      <p className="text-gray-600">Fayoum City, Egypt</p>
+                      <p className="text-gray-600">Cairo City, Egypt</p>
                     </div>
                   </div>
                   

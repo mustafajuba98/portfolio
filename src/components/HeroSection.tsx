@@ -47,7 +47,8 @@ const HeroSection = () => {
               <p className="text-lg text-gray-600 mb-8 max-w-xl">
                 I build scalable, secure, and user-centric web applications
                 using Django, Flask, and React.js, with expertise in PostgreSQL
-                and RESTful API integration.
+                and RESTful API integration. Currently working on innovative projects
+                including e-learning platforms and clinic management systems.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
