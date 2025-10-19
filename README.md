@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# Mustafa Muhammed - Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my work as a Full Stack Python Developer.
 
-**URL**: https://lovable.dev/projects/193658f5-96e2-450c-ae35-11de2202ff59
+## 🚀 Technologies Used
 
-## How can I edit this code?
+- **Frontend**: React.js, TypeScript, Tailwind CSS
+- **UI Components**: shadcn/ui, Radix UI
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom design system
+- **Icons**: Lucide React
 
-There are several ways of editing your application.
+## 📋 Features
 
-**Use Lovable**
+- **Responsive Design**: Optimized for all devices
+- **Modern UI**: Clean and professional interface
+- **Interactive Sections**: Hero, About, Skills, Experience, Projects, Contact
+- **Project Showcase**: Filterable project gallery with different categories
+- **Contact Form**: Functional contact form with validation
+- **CV Download**: Direct download link for resume
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/193658f5-96e2-450c-ae35-11de2202ff59) and start prompting.
+## 🛠️ Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (version 16 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── SkillsSection.tsx
+│   ├── ExperienceSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── ContactSection.tsx
+│   ├── Navbar.tsx
+│   └── Footer.tsx
+├── assets/             # Static assets
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── main.tsx           # Application entry point
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 Customization
 
-## What technologies are used for this project?
+### Colors
+The project uses a custom color palette defined in `tailwind.config.ts`:
+- Primary: Blue tones
+- Accent: Purple tones
+- Secondary: Gray tones
 
-This project is built with:
+### Content
+Update the following files to customize content:
+- `src/components/HeroSection.tsx` - Hero section content
+- `src/components/AboutSection.tsx` - About section and personal details
+- `src/components/ExperienceSection.tsx` - Work experience and education
+- `src/components/SkillsSection.tsx` - Technical skills
+- `src/components/ProjectsSection.tsx` - Project portfolio
+- `src/components/ContactSection.tsx` - Contact information
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Deployment
 
-## How can I deploy this project?
+### Build for Production
+```bash
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/193658f5-96e2-450c-ae35-11de2202ff59) and click on Share -> Publish.
+### Preview Production Build
+```bash
+npm run preview
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Deploy to Vercel
+1. Connect your GitHub repository to Vercel
+2. Configure build settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+3. Deploy automatically on every push
 
-Yes, you can!
+## 📱 Responsive Design
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The portfolio is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+- **Email**: MustafaMuhammedAM@gmail.com
+- **Phone**: (+20) 01018805134
+- **Location**: Cairo City, Egypt
+- **Portfolio**: https://portfolio-nine-swart-92.vercel.app
