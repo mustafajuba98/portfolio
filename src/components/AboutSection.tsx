@@ -12,21 +12,20 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           <div className="lg:col-span-2">
             <p className="text-gray-700 leading-relaxed mb-6">
-              I'm a Full Stack Python Developer with a strong foundation in full-stack web development using Django, Flask, 
+              I'm a Software Engineer with a strong foundation in full-stack web development using Django, Flask, 
               and React.js. I'm passionate about creating scalable, secure, and user-centric solutions that solve real-world problems.
-              Currently working at Opream & Expotech, contributing to backend development with Django REST Framework.
+              Currently working at Brite as a backend engineer on a production HRMS built with Django REST Framework.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-6">
               My experience includes developing full-stack web applications, engineering responsive front-end components,
-              implementing automation scripts, and working with cross-functional teams to deliver complex project requirements
-              within tight deadlines. I specialize in building e-learning platforms, clinic management systems, and e-commerce solutions.
+              and running background work with Celery and Redis. I use AI coding tools such as Cursor, GitHub Copilot,
+              and coding agents to speed up implementation, codebase analysis, and debugging.
             </p>
             
             <p className="text-gray-700 leading-relaxed mb-8">
-              I hold a Bachelor's Degree in Islamic and Arabic Studies from Al-Azhar University, which has enhanced my 
-              analytical thinking and research methodologies. My diverse background includes experience as a translator 
-              and chef, which has developed my leadership, time management, and communication skills.
+              I hold a Bachelor's Degree in Islamic and Arabic Studies from Al-Azhar University (Sep 2023), which has enhanced my 
+              analytical thinking and research methodologies.
             </p>
             
             <div className="flex flex-wrap gap-3">

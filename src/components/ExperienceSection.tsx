@@ -15,10 +15,26 @@ type ExperienceItem = {
 const experiences: ExperienceItem[] = [
   {
     type: "work",
+    title: "Software Engineer (Backend)",
+    organization: "Brite",
+    location: "El Sheikh Zaid, Giza, Egypt (Hybrid)",
+    period: "Dec 2025 – Present",
+    description: [
+      "Developing and maintaining a production HRMS platform serving 30K+ users across the employee lifecycle.",
+      "Built REST APIs with Django REST Framework for Employees, Attendance, Leave, Payroll, Recruitment, Performance, Notifications, and Reporting.",
+      "Designed role-based access control, authentication, and permissions for a multi-role environment.",
+      "Moved 10 unmanaged schedulers to Celery Beat and systemd, cutting server RAM use by 72%.",
+      "Cut notification processing from 60+ seconds for 1,000 records to 3–5 seconds for 10,000 records.",
+      "Improved PostgreSQL performance with indexing, query refactoring, and ORM optimization, and deployed services on Azure.",
+      "Used AI coding assistants to analyze the codebase, implement backend features, and troubleshoot issues."
+    ],
+  },
+  {
+    type: "work",
     title: "Full Stack Python Developer",
     organization: "Opream & Expotech",
     location: "Remote",
-    period: "2024 – Present",
+    period: "Jul 2024 – Dec 2025",
     description: [
       "Contributed to backend development with Django REST Framework, implementing secure role-based APIs.",
       "Developed interactive frontend modules using React.js and TailwindCSS with focus on responsive design.",
@@ -27,40 +43,28 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    type: "internship",
-    title: "Full Stack Developer Intern",
-    organization: "Information Technology Institute (ITI)",
-    location: "BeniSueif, Egypt",
-    period: "Jan. 2024 – Jun. 2024",
-    description: [
-      "Developed full-stack web applications using Django and Flask frameworks with a focus on security best practices.",
-      "Engineered responsive front-end components using React.js, improving user engagement by 30%.",
-      "Collaborated with cross-functional teams to deliver complex project requirements within tight deadlines.",
-      "Implemented automation scripts using Bash and JavaScript to optimize development workflows.",
-      "Applied agile methodologies for efficient project management and feature delivery."
-    ],
-  },
-  {
     type: "work",
-    title: "Chef",
-    organization: "Various Restaurants",
-    location: "Egypt",
-    period: "2021 – 2024",
-    description: [
-      "Prepared dishes, managed kitchen operations, and ensured food quality and safety.",
-      "Developed leadership skills through kitchen management and staff coordination.",
-      "Enhanced problem-solving abilities through handling high-pressure situations."
-    ],
-  },
-  {
-    type: "work",
-    title: "Translator",
+    title: "Software Engineer (Full Stack)",
     organization: "Freelance",
     location: "Remote",
-    period: "2019 – 2021 (Part-time)",
+    period: "2023 – 2024",
     description: [
-      "Translated documents between English and Arabic, ensuring accuracy and cultural nuance.",
-      "Developed strong communication skills and attention to detail."
+      "Developed full-stack web applications using Python, Django, Django REST Framework, React.js, Next.js, and PostgreSQL.",
+      "Built AresModz, Dynamic Clinic Management System, and Sho8l Fnadeek, covering APIs, authentication, role-based access, and responsive interfaces.",
+      "Designed and integrated RESTful APIs with the frontends, focusing on maintainability and performance."
+    ],
+  },
+  {
+    type: "internship",
+    title: "Full Stack Python Development Track",
+    organization: "Information Technology Institute (ITI)",
+    location: "BeniSuef, Egypt",
+    period: "Jan 2024 – Jun 2024",
+    description: [
+      "Built full-stack applications using Django and Flask with security best practices.",
+      "Developed responsive frontend interfaces using React.js and Redux.",
+      "Worked in agile teams using Git workflows and sprint planning.",
+      "Designed and consumed RESTful APIs between frontend and backend systems."
     ],
   },
   {
@@ -68,7 +72,7 @@ const experiences: ExperienceItem[] = [
     title: "Bachelor's Degree in Islamic and Arabic Studies",
     organization: "Faculty of Islamic and Arabic Studies, Al-Azhar University",
     location: "Sharqia, Egypt",
-    period: "Graduated Sep. 2023",
+    period: "Sep 2023",
     description: [
       "Completed studies with a focus on analytical thinking and research methodologies.",
       "Developed strong writing and communication skills."
