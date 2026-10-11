@@ -23,8 +23,8 @@ const projects: Project[] = [
   {
     id: 19,
     title: "SeekerLeap",
-    description: "A live job search platform with matched roles, saved searches, notifications, and freelance projects. New listings are matched to the user's skills and delivered in one workspace.",
-    technologies: ["Next.js", "FastAPI"],
+    description: "A live job intelligence platform featuring automated role matching, saved searches, notifications, and freelance projects. Led end-to-end development across Next.js and FastAPI architecture, automated CI/CD pipelines, and full DevOps deployment on AWS.",
+    technologies: ["Next.js", "FastAPI", "AWS", "Docker", "CI/CD"],
     images: [
       "/projects/seeker-dashboard.png",
       "/projects/seeker-new-jobs.png",
