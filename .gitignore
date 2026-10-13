@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 _tmp-clones
 _temp_projects
+_temp_repos
 dist
 dist-ssr
 *.local
