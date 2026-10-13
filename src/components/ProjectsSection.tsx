@@ -16,7 +16,7 @@ type Project = {
     backend?: string;
   };
   liveUrl?: string;
-  type: string;
+  type?: string;
 };
 
 const projects: Project[] = [
@@ -39,7 +39,16 @@ const projects: Project[] = [
     title: "Mentora - E-Learning Platform",
     description: "A responsive multi-role platform (Student, Teacher, Parent, Admin) with advanced role-based access and JWT/OTP authentication. Features course management, scheduling system, and interactive content integration.",
     technologies: ["React.js", "Vite", "TailwindCSS", "Django REST Framework", "JWT", "H5P", "HTML5"],
-    images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"],
+    images: [
+      "/projects/mentora-teacher-dashboard.png",
+      "/projects/mentora-admin-dashboard.png",
+      "/projects/mentora-courses.png",
+      "/projects/mentora-signin.png",
+    ],
+    multipleRepos: {
+      frontend: "https://github.com/mustafajuba98/tutoring-platform-ui",
+      backend: "https://github.com/mustafajuba98/Mentora-Backend",
+    },
     type: "Professional",
   },
   {
@@ -47,15 +56,28 @@ const projects: Project[] = [
     title: "Dynamic Clinic Management System",
     description: "A full-stack clinic management application for Dr. Ahmed El Kholy Clinic with appointment scheduling, patient record management, prescription generation, and dynamic dashboard for clinic insights.",
     technologies: ["Next.js", "React", "Django REST Framework", "Simple JWT", "Tailwind CSS", "shadcn/ui"],
-    images: ["https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"],
+    images: [
+      "/projects/clinic-home.png",
+      "/projects/clinic-dashboard.png",
+    ],
+    multipleRepos: {
+      frontend: "https://github.com/mustafajuba98/Clinic_MS_Front-End",
+      backend: "https://github.com/mustafajuba98/Clinic_MS_Back-End",
+    },
     type: "Professional",
   },
   {
     id: 3,
     title: "AresModz - Gaming Mods E-commerce",
-    description: "Frontend for an e-commerce platform specializing in premium gaming modifications, featuring product browsing, detailed views, user accounts, and shopping cart functionality.",
-    technologies: ["React", "Vite", "Next.js", "Tailwind CSS", "shadcn/ui"],
-    images: ["https://images.unsplash.com/photo-1556438064-2d7646166914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"],
+    description: "A specialized storefront for premium gaming modifications and software solutions, featuring catalog browsing, live product status, user reviews, and cart checkout.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "shadcn/ui"],
+    images: [
+      "/projects/aresmodz-home.png",
+      "/projects/aresmodz-store.png",
+      "/projects/aresmodz-reviews.png",
+      "/projects/aresmodz-status.png",
+    ],
+    githubUrl: "https://github.com/mustafajuba98/Byte",
     type: "Professional",
   },
   {
@@ -256,7 +278,6 @@ function ProjectSlides({
 
 const ProjectsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [filter, setFilter] = useState<string>("all");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -277,65 +298,16 @@ const ProjectsSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.type.toLowerCase() === filter.toLowerCase());
-
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-heading">My Projects</h2>
 
-        <div className="flex justify-center mb-8">
-          <div className="flex space-x-2">
-            <Button
-              variant={filter === "all" ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter("all")}
-              className={filter === "all" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
-            >
-              All
-            </Button>
-            <Button
-              variant={filter === "ITI" ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter("ITI")}
-              className={filter === "ITI" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
-            >
-              ITI
-            </Button>
-            <Button
-              variant={filter === "personal" ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter("personal")}
-              className={filter === "personal" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
-            >
-              Personal
-            </Button>
-            <Button
-              variant={filter === "collaborative" ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter("collaborative")}
-              className={filter === "collaborative" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
-            >
-              Collaborative
-            </Button>
-            <Button
-              variant={filter === "professional" ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter("professional")}
-              className={filter === "professional" ? "bg-portfolio-accent hover:bg-portfolio-accent/90" : ""}
-            >
-              Professional
-            </Button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`transition-all duration-700 delay-${index % 3 * 100} ${
+              className={`transition-all duration-700 delay-${(index % 3) * 100} ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
@@ -348,7 +320,7 @@ const ProjectsSection = () => {
                   />
                   <div className="absolute top-3 right-3">
                     <Badge variant="outline" className="bg-white/80 text-portfolio-primary text-xs font-medium">
-                      {project.type}
+                      {project.technologies[0]}
                     </Badge>
                   </div>
                   <div className="absolute inset-0 bg-black/50 opacity-0 transition-opacity project-overlay flex items-center justify-center space-x-4">
